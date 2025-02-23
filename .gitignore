@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+src-tauri/target/
+src-tauri/.cargo/
+
+src-tauri/tauri.windows.rs
+src-tauri/tauri.linux.rs
+src-tauri/tauri.macos.rs
