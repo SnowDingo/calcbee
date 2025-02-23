@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+:root{
+  --primary-color: #a9b4e6;
+    --secondary-color: #a1abcd;
+  --accent-color: #e6b546;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+}
+
+body{
+  background-color:var(--background-color);
+    font-family: Arial, sans-serif;
+  text-align: center;
+  color: var(--text-color);
+}
+
+
+.num{
+  border:none;
+  transition: 100ms ease-in-out all;
+  background-color:var(--primary-color);
+}
+
+.num:hover{
+  transition: 100ms ease-in-out all;
+  background-color: var(--secondary-color);
+}
