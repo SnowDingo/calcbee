@@ -7,9 +7,7 @@ interface operationbutton{
 
 const OperationButton = ({value, onClick}:operationbutton) => {
     return (
-        <div className="">
-        <Button label={value} className="p-4 text-lg max-w-sm max-h-sm bg-blue-100 hover:bg-blue-200 " onClick={onClick} />
-        </div>
+        <Button label={value} className="p-4 w-12 rounded-sm  h-12 text-lg  bg-blue-100 hover:bg-blue-200 " onClick={onClick} />
     )
 }
 export default OperationButton;

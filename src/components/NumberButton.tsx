@@ -7,9 +7,7 @@ interface numbutton{
 
 const NumberButton = ({value, onClick}:numbutton) => {
     return (
-        <div className="">
-        <Button label={value} className="p-4 bg-blue-100 hover:bg-blue-200 " onClick={onClick} />
-        </div>
+        <Button label={value} className="w-12  h-12 p-4 rounded-sm  text-lg bg-blue-100 hover:bg-blue-200 " onClick={onClick} />
     )
 }
 export default NumberButton;
