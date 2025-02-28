@@ -3,6 +3,7 @@ import "./App.css";
 import {useEffect, useState} from "react";
 import NumberButton from "./components/NumberButton.tsx"
 import OperationButton from "./components/OperationButton.tsx";
+import Header from "./components/Header.tsx"
 
 import { evaluate} from "mathjs"
 
@@ -33,7 +34,7 @@ function App() {
             } else if (event.key === "Backspace") {
                 setOperation(operation.substring(0, operation.length - 1));
 
-            } else if (event.key === "+" || event.key === "-" || event.key === "*" || event.key === "/") {
+            } else if (event.key === "+" || event.key === "-" || event.key === "*" || event.key === "/" || event.key === ".") {
                 setOperation(operation + event.key);
             } else if (event.key >= "0" && event.key <= "9") {
                 setOperation(operation + event.key);
@@ -47,8 +48,8 @@ function App() {
 
 
     return (
-    <main className="container w-full h-full ">
-        <h1>CalcBee!</h1>
+    <main className=" w-full h-full ">
+        <Header />
         {/*Below here is the actual calculator*/}
         <div className="w-1/2 flex justify-center mr-auto ml-auto  flex-col ">
         <div className=" bg-white border-black  border-solid　 p-4 my-2 rounded-md">
@@ -59,6 +60,7 @@ function App() {
             {Array.from({ length: 10 }, (_, i) => (
                 <NumberButton key={9-i} value={(9-i).toString()} onClick={() => handleNumber((9-i).toString())} />
             ))}
+            <OperationButton value={"."} onClick={()=> {handleOperation(".")}} />
             <OperationButton value={"="} onClick={()=> {checkExpressionandcalculate(operation)}} />
         </div>
         <div className="flex flex-col items-center text-center justify-center  ">
